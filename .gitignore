@@ -1,0 +1,23 @@
+
+
+# Node and related ecosystem
+# ==========================
+.nodemonignore
+node_modules
+.bower-*/
+bower_components
+coverage
+*.env
+.env.development
+.env.production
+
+# General
+# =======
+*.log
+dist
+bundles
+
+# Editors
+# =======
+.idea
+.vscode
