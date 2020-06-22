@@ -5,6 +5,9 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 const expressValidator = require('express-validator');
+const passport = require('passport');
+require('./auth/auth');
+
 dotenv.config();
 
 // db connection
@@ -19,12 +22,13 @@ mongoose
 const app = express();
 //bring in routes
 
-const postRoutes = require('./routes/post');
+const router = require('./routes');
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(expressValidator());
-app.use('/', postRoutes);
+app.use(passport.initialize());
+app.use('/', router);
 
 const port = 3000;
 app.listen(port, () => {
