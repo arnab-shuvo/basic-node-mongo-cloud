@@ -12,9 +12,8 @@ dotenv.config();
 
 // db connection
 mongoose
-	.connect('mongodb://mongo:27018/nodejs', {
+	.connect('mongodb://mongo:27017/node-mongo', {
 		useNewUrlParser: true,
-		useUnifiedTopology: true,
 	})
 	.then(() => console.log('DB Connected'))
 	.catch((err) => console.log(`error connecting db::  ${err.message}`));
