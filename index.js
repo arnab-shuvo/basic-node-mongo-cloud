@@ -12,7 +12,7 @@ dotenv.config();
 
 // db connection
 mongoose
-	.connect(process.env.MONGO_URI, {
+	.connect('mongodb://mongo:27018/nodejs', {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	})

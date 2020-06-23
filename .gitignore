@@ -1,8 +1,4 @@
 
-
-# Node and related ecosystem
-# ==========================
-.nodemonignore
 node_modules
 .bower-*/
 bower_components
